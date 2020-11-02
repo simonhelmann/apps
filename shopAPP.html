@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Shopping list</title>
+<style type="text/css">
+
+
+#box { 
+placeholder: #999b97;
+margin-left:170px;
+}
+
+fieldset { 
+	border: 5px;
+	border-radius:8px;
+	box-shadow: 0 0 5px #999;
+	background-color: #d9d9ff;
+	}
+
+
+
+#main {
+	border-radius: 25px; 
+	padding: 15px; 
+	height: 540px;
+	width: 50%; 
+	position: relative; 
+	}
+
+
+
+#button1 {
+
+
+	margin-bottom:0px;
+	margin-left:50px;
+
+}
+
+#form {
+ margin-left:460px;
+
+}
+body{
+background-color: #d9ffdb
+
+}
+
+p{
+margin-left:150px;
+
+
+}
+</style>
+<script>
+
+function addItem(){
+var newItem = document.createElement("div");
+newItem.innerHTML = document.getElementById("box").value;
+newItem.onclick = removeItem;
+document.getElementById("list").appendChild(newItem);
+
+}
+
+
+function removeItem(){
+
+document.getElementById("list").removeChild(this);
+
+
+
+}
+
+
+
+
+</script>
+
+</head>
+
+<body> 
+	<form id="form">
+		<div id="main">
+			<fieldset>
+			
+				<p><b> Special exhiboition to-Do list </b></p>
+
+				<br/>
+
+				<input type="text" id="box"   value="" placeholder="type here"/>
+
+				<br/>
+				<br/>
+
+				<input type="button" value="add item" onclick="addItem();"/>
+
+
+	
+				<div id="list"></div>
+
+
+
+
+
+
+
+
+
+
+			</fieldset>
+		</div>
+</form>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+
+ 
